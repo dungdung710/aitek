@@ -1,8 +1,6 @@
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
 
-// Dùng các hình mặc định, nếu có ảnh thật chỉ cần đổi đường dẫn.
-
 const VerticalFeatures = () => (
   <Section
     title="Why Choose AutoMate?"
@@ -33,39 +31,22 @@ const VerticalFeatures = () => (
       imageAlt="Hardware integration feature"
     />
 
-    {/* Block 4: How It Works */}
+    {/* Block 4: How AutoMate Works */}
     <VerticalFeatureRow
       title="How AutoMate Works"
-      description={
-        <>
-          <b>Step 1:</b> Driver gives voice command.<br />
-          <b>Step 2:</b> Raspberry Pi recognizes command locally (offline) using Vosk.<br />
-          <b>Step 3:</b> STM32 microcontroller sends signals to control car features via I2C/CAN.<br />
-          <b>Step 4:</b> Robot key activates system only when placed on dashboard – remove it to power off.<br />
-        </>
-      }
+      description="Step 1: Driver gives voice command. Step 2: Raspberry Pi recognizes the command locally (offline) using Vosk. Step 3: STM32 microcontroller sends signals to control car features via I2C/CAN. Step 4: Robot key activates system only when placed on dashboard."
       image="/assets/images/feature4.svg"
       imageAlt="How AutoMate works"
       reverse
     />
 
-    {/* Block 5: Team */}
+    {/* Block 5: Meet the AITEK Team */}
     <VerticalFeatureRow
       title="Meet the AITEK Team"
-      description={
-        <>
-          <b>Tieu Chi</b> – Team Leader, Embedded Software<br />
-          <b>Thuy Tien</b> – Hardware Developer<br />
-          <b>Minh Duy</b> – Software Developer<br />
-          <b>Nang Tri</b> – Team Spokesperson<br />
-          <b>Tien Dung</b> – Market Analyst<br />
-          <b>Mentor:</b> Mr. P.T Dang Quang – Faculty of Transportation Engineering, HCMUT
-        </>
-      }
+      description="Tieu Chi – Team Leader, Embedded Software. Thuy Tien – Hardware Developer. Minh Duy – Software Developer. Nang Tri – Team Spokesperson. Tien Dung – Market Analyst. Mentor: Mr. P.T Dang Quang."
       image="/assets/images/feature5.svg"
       imageAlt="AITEK Team"
     />
-
   </Section>
 );
 
