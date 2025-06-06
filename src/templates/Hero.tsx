@@ -1,43 +1,22 @@
-import Link from 'next/link';
-
-import { Background } from '../background/Background';
-import { Button } from '../button/Button';
 import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
-import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="bg-gray-100">
-    <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="/">Sign in</Link>
-        </li>
-      </NavbarTwoColumns>
-    </Section>
-
-    <Section yPadding="pt-20 pb-32">
-      <HeroOneButton
-        title={
-          <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
-          </>
-        }
-        description="The easiest way to build a React landing page in seconds."
-        button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
-          </Link>
-        }
-      />
-    </Section>
-  </Background>
+  <Section>
+    <h1 className="text-5xl font-extrabold mb-4 text-center">
+      Make Your Drive, Make Your Style
+    </h1>
+    <h2 className="text-2xl font-semibold mb-6 text-center">
+      AutoMate – The 100% Offline Voice Assistant for Cars
+    </h2>
+    <p className="max-w-xl mx-auto mb-8 text-lg text-center">
+      Upgrade your driving experience with hands-free, distraction-free, and reliable control.
+      Experience the future of in-car safety and convenience, powered by innovative Vietnamese technology.
+    </p>
+    <div className="flex justify-center gap-6">
+      <a href="#features" className="px-6 py-3 bg-blue-800 text-white font-bold rounded-full shadow-lg hover:bg-blue-900 transition">See Features</a>
+      <a href="#contact" className="px-6 py-3 bg-transparent border border-blue-800 text-blue-800 font-bold rounded-full hover:bg-blue-100 transition">Contact Us</a>
+    </div>
+  </Section>
 );
 
 export { Hero };
